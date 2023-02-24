@@ -19,14 +19,21 @@ class Renew:
 		self.server_C = None
 		self.create_docker_image("ubuntu-ssh:latest")
 		self.expand_server(2)
+		self.create_config_file('config.py')
+		self.send_to_server_config_info(self.server_B, 'test', 'config.py')
+		self.send_to_server_config_info(self.server_C, 'test', 'config.py')
 		os.system("ssh-keygen")
-		
+	
+	def create_config_file(self, config_file):
+		new_data = f"server_B = '{self.server_B}'\nserver_C = '{self.server_C}'"
+		with open(config_file, 'w') as f:
+			f.write(new_data)
 	
 	def get_server_ip(self):
-		b = os.popen('docker container inspect renew_server_1').read()
-		self.server_B = json.loads(b)[0]["NetworkSettings"]["Networks"]['renew_default']['IPAddress']
-		c = os.popen('docker container inspect renew_server_2').read()
-		self.server_C = json.loads(c)[0]["NetworkSettings"]["Networks"]['renew_default']['IPAddress']
+		b = os.popen('docker container inspect renew_devops_server_1').read()
+		self.server_B = json.loads(b)[0]["NetworkSettings"]["Networks"]['renew_devops_default']['IPAddress']
+		c = os.popen('docker container inspect renew_devops_server_2').read()
+		self.server_C = json.loads(c)[0]["NetworkSettings"]["Networks"]['renew_devops_default']['IPAddress']
 		return True
 		
 	
@@ -44,11 +51,14 @@ class Renew:
 		print(self.server_C)
 		return True
 	
+	def send_to_server_config_info(self, server_ip, user_name, config_file):
+		os.system(f"cat {config_file} | ssh {user_name}@{server_ip} 'cat > ~/{config_file}'")
+	
 	def connect_to_server_and_do(self, server_ip, user_name, python_script):
-		os.system(f"cat {python_script} | ssh {user_name}@{server_ip} 'cat > {python_script}; echo '{user_name}' | sudo -S python3 {python_script}' >> log.txt 2>&1")
+		os.system(f"cat {python_script} | ssh {user_name}@{server_ip} 'cat > {python_script}; echo '{user_name}' | sudo -S python3 {python_script}'")
 	
 	def connect_to_server_and_do_no_sudo(self, server_ip, user_name, python_script):
-		os.system(f"cat {python_script} | ssh {user_name}@{server_ip} 'cat > {python_script}; python3 {python_script}' >> log.txt 2>&1")
+		os.system(f"cat {python_script} | ssh {user_name}@{server_ip} 'cat > {python_script}; python3 {python_script}'")
 		
 	@ok_output
 	def disable_SSH_auth_by_passwd(self, server_ip, user_name):
@@ -76,6 +86,7 @@ class Renew:
 	@ok_output	
 	def allow_postgresql_access(self, server_ip):
 		print(f"Allowing access to postgresql for user developer from {server_ip}")
+		self.send_to_server_config_info(server_ip, 'postgres', 'config.py')
 		self.connect_to_server_and_do_no_sudo(server_ip, 'postgres', 'access_from_C.py')
 		return True
 	
@@ -87,8 +98,10 @@ class Renew:
 	
 	@ok_output	
 	def init_firewall_rules(self):
-		print(f"Initiating iptables rules")
+		print(f"Initiating iptables rules on {self.server_B}")
 		self.connect_to_server_and_do(self.server_B, 'test', 'create_iptables_B.py')
+		
+		print(f"Initiating iptables rules on {self.server_C}")
 		self.connect_to_server_and_do(self.server_C, 'test', 'create_iptables_C.py')
 		return True
 	

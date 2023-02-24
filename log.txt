@@ -1,0 +1,836 @@
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 1.2s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.0s done
+#4 DONE 0.0s
+
+#5 [2/9] RUN apt update
+#5 CACHED
+
+#6 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#6 CACHED
+
+#7 [6/9] RUN mkdir /home/test/.ssh
+#7 CACHED
+
+#8 [5/9] RUN usermod -aG sudo test
+#8 CACHED
+
+#9 [7/9] RUN chown test:root /home/test/.ssh
+#9 CACHED
+
+#10 [3/9] RUN apt install openssh-server sudo vim -y
+#10 CACHED
+
+#11 [8/9] RUN service ssh start
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 0.7s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.0s done
+#4 DONE 0.0s
+
+#5 [7/9] RUN chown test:root /home/test/.ssh
+#5 CACHED
+
+#6 [6/9] RUN mkdir /home/test/.ssh
+#6 CACHED
+
+#7 [5/9] RUN usermod -aG sudo test
+#7 CACHED
+
+#8 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#8 CACHED
+
+#9 [8/9] RUN service ssh start
+#9 CACHED
+
+#10 [2/9] RUN apt update
+#10 CACHED
+
+#11 [3/9] RUN apt install openssh-server sudo vim -y
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 0.7s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [3/9] RUN apt install openssh-server sudo vim -y
+#5 CACHED
+
+#6 [5/9] RUN usermod -aG sudo test
+#6 CACHED
+
+#7 [2/9] RUN apt update
+#7 CACHED
+
+#8 [8/9] RUN service ssh start
+#8 CACHED
+
+#9 [6/9] RUN mkdir /home/test/.ssh
+#9 CACHED
+
+#10 [7/9] RUN chown test:root /home/test/.ssh
+#10 CACHED
+
+#11 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 1.3s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.0s done
+#4 DONE 0.1s
+
+#5 [2/9] RUN apt update
+#5 CACHED
+
+#6 [6/9] RUN mkdir /home/test/.ssh
+#6 CACHED
+
+#7 [7/9] RUN chown test:root /home/test/.ssh
+#7 CACHED
+
+#8 [8/9] RUN service ssh start
+#8 CACHED
+
+#9 [5/9] RUN usermod -aG sudo test
+#9 CACHED
+
+#10 [3/9] RUN apt install openssh-server sudo vim -y
+#10 CACHED
+
+#11 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 1.4s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [5/9] RUN usermod -aG sudo test
+#5 CACHED
+
+#6 [7/9] RUN chown test:root /home/test/.ssh
+#6 CACHED
+
+#7 [2/9] RUN apt update
+#7 CACHED
+
+#8 [8/9] RUN service ssh start
+#8 CACHED
+
+#9 [3/9] RUN apt install openssh-server sudo vim -y
+#9 CACHED
+
+#10 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#10 CACHED
+
+#11 [6/9] RUN mkdir /home/test/.ssh
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 0.7s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [2/9] RUN apt update
+#5 CACHED
+
+#6 [7/9] RUN chown test:root /home/test/.ssh
+#6 CACHED
+
+#7 [3/9] RUN apt install openssh-server sudo vim -y
+#7 CACHED
+
+#8 [6/9] RUN mkdir /home/test/.ssh
+#8 CACHED
+
+#9 [8/9] RUN service ssh start
+#9 CACHED
+
+#10 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#10 CACHED
+
+#11 [5/9] RUN usermod -aG sudo test
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 1.2s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [8/9] RUN service ssh start
+#5 CACHED
+
+#6 [2/9] RUN apt update
+#6 CACHED
+
+#7 [3/9] RUN apt install openssh-server sudo vim -y
+#7 CACHED
+
+#8 [7/9] RUN chown test:root /home/test/.ssh
+#8 CACHED
+
+#9 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#9 CACHED
+
+#10 [5/9] RUN usermod -aG sudo test
+#10 CACHED
+
+#11 [6/9] RUN mkdir /home/test/.ssh
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.2s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 0.6s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [7/9] RUN chown test:root /home/test/.ssh
+#5 CACHED
+
+#6 [8/9] RUN service ssh start
+#6 CACHED
+
+#7 [2/9] RUN apt update
+#7 CACHED
+
+#8 [3/9] RUN apt install openssh-server sudo vim -y
+#8 CACHED
+
+#9 [5/9] RUN usermod -aG sudo test
+#9 CACHED
+
+#10 [6/9] RUN mkdir /home/test/.ssh
+#10 CACHED
+
+#11 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 1.2s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [8/9] RUN service ssh start
+#5 CACHED
+
+#6 [5/9] RUN usermod -aG sudo test
+#6 CACHED
+
+#7 [7/9] RUN chown test:root /home/test/.ssh
+#7 CACHED
+
+#8 [2/9] RUN apt update
+#8 CACHED
+
+#9 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#9 CACHED
+
+#10 [6/9] RUN mkdir /home/test/.ssh
+#10 CACHED
+
+#11 [3/9] RUN apt install openssh-server sudo vim -y
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 1.4s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [7/9] RUN chown test:root /home/test/.ssh
+#5 CACHED
+
+#6 [8/9] RUN service ssh start
+#6 CACHED
+
+#7 [2/9] RUN apt update
+#7 CACHED
+
+#8 [3/9] RUN apt install openssh-server sudo vim -y
+#8 CACHED
+
+#9 [5/9] RUN usermod -aG sudo test
+#9 CACHED
+
+#10 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#10 CACHED
+
+#11 [6/9] RUN mkdir /home/test/.ssh
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 1.3s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [6/9] RUN mkdir /home/test/.ssh
+#5 CACHED
+
+#6 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#6 CACHED
+
+#7 [7/9] RUN chown test:root /home/test/.ssh
+#7 CACHED
+
+#8 [2/9] RUN apt update
+#8 CACHED
+
+#9 [5/9] RUN usermod -aG sudo test
+#9 CACHED
+
+#10 [8/9] RUN service ssh start
+#10 CACHED
+
+#11 [3/9] RUN apt install openssh-server sudo vim -y
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 1.3s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [5/9] RUN usermod -aG sudo test
+#5 CACHED
+
+#6 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#6 CACHED
+
+#7 [8/9] RUN service ssh start
+#7 CACHED
+
+#8 [3/9] RUN apt install openssh-server sudo vim -y
+#8 CACHED
+
+#9 [6/9] RUN mkdir /home/test/.ssh
+#9 CACHED
+
+#10 [7/9] RUN chown test:root /home/test/.ssh
+#10 CACHED
+
+#11 [2/9] RUN apt update
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 1.4s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [6/9] RUN mkdir /home/test/.ssh
+#5 CACHED
+
+#6 [8/9] RUN service ssh start
+#6 CACHED
+
+#7 [3/9] RUN apt install openssh-server sudo vim -y
+#7 CACHED
+
+#8 [2/9] RUN apt update
+#8 CACHED
+
+#9 [5/9] RUN usermod -aG sudo test
+#9 CACHED
+
+#10 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#10 CACHED
+
+#11 [7/9] RUN chown test:root /home/test/.ssh
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 0.6s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#5 CACHED
+
+#6 [5/9] RUN usermod -aG sudo test
+#6 CACHED
+
+#7 [6/9] RUN mkdir /home/test/.ssh
+#7 CACHED
+
+#8 [8/9] RUN service ssh start
+#8 CACHED
+
+#9 [3/9] RUN apt install openssh-server sudo vim -y
+#9 CACHED
+
+#10 [2/9] RUN apt update
+#10 CACHED
+
+#11 [7/9] RUN chown test:root /home/test/.ssh
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 0.7s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [5/9] RUN usermod -aG sudo test
+#5 CACHED
+
+#6 [6/9] RUN mkdir /home/test/.ssh
+#6 CACHED
+
+#7 [7/9] RUN chown test:root /home/test/.ssh
+#7 CACHED
+
+#8 [8/9] RUN service ssh start
+#8 CACHED
+
+#9 [2/9] RUN apt update
+#9 CACHED
+
+#10 [3/9] RUN apt install openssh-server sudo vim -y
+#10 CACHED
+
+#11 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 0.7s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [5/9] RUN usermod -aG sudo test
+#5 CACHED
+
+#6 [8/9] RUN service ssh start
+#6 CACHED
+
+#7 [7/9] RUN chown test:root /home/test/.ssh
+#7 CACHED
+
+#8 [2/9] RUN apt update
+#8 CACHED
+
+#9 [3/9] RUN apt install openssh-server sudo vim -y
+#9 CACHED
+
+#10 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#10 CACHED
+
+#11 [6/9] RUN mkdir /home/test/.ssh
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 0.7s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [6/9] RUN mkdir /home/test/.ssh
+#5 CACHED
+
+#6 [8/9] RUN service ssh start
+#6 CACHED
+
+#7 [2/9] RUN apt update
+#7 CACHED
+
+#8 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#8 CACHED
+
+#9 [5/9] RUN usermod -aG sudo test
+#9 CACHED
+
+#10 [3/9] RUN apt install openssh-server sudo vim -y
+#10 CACHED
+
+#11 [7/9] RUN chown test:root /home/test/.ssh
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 0.6s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [7/9] RUN chown test:root /home/test/.ssh
+#5 CACHED
+
+#6 [3/9] RUN apt install openssh-server sudo vim -y
+#6 CACHED
+
+#7 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#7 CACHED
+
+#8 [2/9] RUN apt update
+#8 CACHED
+
+#9 [5/9] RUN usermod -aG sudo test
+#9 CACHED
+
+#10 [8/9] RUN service ssh start
+#10 CACHED
+
+#11 [6/9] RUN mkdir /home/test/.ssh
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 382B 0.0s done
+#2 DONE 0.2s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 DONE 1.3s
+
+#4 [1/9] FROM docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+#4 resolve docker.io/library/ubuntu:latest@sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f 0.1s done
+#4 DONE 0.1s
+
+#5 [7/9] RUN chown test:root /home/test/.ssh
+#5 CACHED
+
+#6 [8/9] RUN service ssh start
+#6 CACHED
+
+#7 [3/9] RUN apt install openssh-server sudo vim -y
+#7 CACHED
+
+#8 [4/9] RUN useradd -rm -d /home/test -s /bin/bash -g root -G sudo -u 1000 test
+#8 CACHED
+
+#9 [2/9] RUN apt update
+#9 CACHED
+
+#10 [5/9] RUN usermod -aG sudo test
+#10 CACHED
+
+#11 [6/9] RUN mkdir /home/test/.ssh
+#11 CACHED
+
+#12 [9/9] RUN  echo 'test:test' | chpasswd
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 writing image sha256:fec10d92a7cbdd1b426bcadca046059b0c6505b641f7847d5bd4737bd52d93bf done
+#13 naming to docker.io/library/ubuntu-ssh:latest done
+#13 DONE 0.0s

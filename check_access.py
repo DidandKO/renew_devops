@@ -1,9 +1,13 @@
 import os
+from config import server_B
 
-os.system("dpkg-reconfigure locales")
-os.system("apt-get install tzdata -y")
+print('Installing Postgresql')
+os.system("dpkg-reconfigure locales >> log.txt 2>&1")
+os.system("apt-get install tzdata -y >> log.txt 2>&1")
 
-os.system("apt-get install postgresql -y")
+os.system("apt-get install postgresql -y >> log.txt 2>&1")
 os.system("usermod -aG sudo postgres")
-os.system("service postgresql start")
-os.system("echo 'developer' | psql -h 172.18.0.2 -U developer -d myapp")
+os.system("service postgresql start >> log.txt 2>&1")
+
+print('Checking connection')
+os.system(f"echo 'developer' | psql -h {server_B} -U developer -d myapp")

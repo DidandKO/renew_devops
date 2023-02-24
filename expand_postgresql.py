@@ -1,13 +1,16 @@
 import os
 
-user_name = "devops"
-os.system("usermod -aG sudo postgres")
+print('Configure tzdata')
+os.system("dpkg-reconfigure locales >> log.txt 2>&1")
+os.system("apt-get install tzdata -y >> log.txt 2>&1")
 
-os.system("dpkg-reconfigure locales")
-os.system("apt-get install tzdata -y")
+print('Expanding Postgresql')
+os.system("apt-get install postgresql -y >> log.txt 2>&1")
+os.system("service postgresql start >> log.txt 2>&1")
 
-os.system("apt-get install postgresql -y")
-os.system("service postgresql start")
-os.system("echo 'createdb myapp; createdb myauth; createuser developer;' | sudo -i -u postgres")
+print("Creating db's myapp, myauth and user developer")
+os.system("echo 'createdb myapp;' | sudo -i -u postgres >> log.txt 2>&1")
+os.system("echo 'createdb myauth;' | sudo -i -u postgres >> log.txt 2>&1")
+os.system("echo 'createuser developer;' | sudo -i -u postgres >> log.txt 2>&1")
 os.system(f"echo 'postgres:postgres' | chpasswd")
 
