@@ -1,0 +1,53 @@
+A) sudo docker build . -t ubuntu-ssh:latest
+A) sudo docker run --cap-add=NET_ADMIN -ti --rm ubuntu-ssh /bin/bash
+B) service ssh start
+	A) sudo docker ps -a
+	A) sudo docker container inspect <container_id>
+	A) ssh test@<IPAddress> (passwd=test)
+	A) ssh-keygen
+	A) cat ~/.ssh/id_rsa.pub | ssh test@172.17.0.2 'cat >> ~/.ssh/authorized_keys'
+	A) ssh test@<IPAddress>
+B) sudo adduser devops (passwd=devops)
+B) sudo visudo (add 'devops ALL=(ALL:ALL) NOPASSWD:ALL')
+B) exit
+A) ssh devops@<IPAddress>
+B) mkdir .ssh
+A) cat ~/.ssh/id_rsa.pub | ssh devops@172.17.0.2 'cat >> ~/.ssh/authorized_keys'
+B) exit
+	A) ssh test@<IPAddress>	
+	B) sudo apt install postgresql postgresql-contrib
+	B) sudo service postgresql start
+	
+	B) sudo -i -u postgres
+	B) createdb myapp 
+	B) createdb myauth (\l)
+	B) createuser developer (\du)
+	B) psql
+	B) alter user developer with PASSWORD 'developer';
+	
+	B) psql -h localhost -p 5432 -U developer myapp (passwd=developer)
+	B) create table test1 (test_id int);
+	B) REVOKE ALL ON ALL TABLES IN SCHEMA public FROM developer;
+	B) GRANT SELECT, UPDATE ON ALL TABLES IN SCHEMA public TO developer;
+	
+	B) psql -h localhost -p 5432 -U developer myauth (passwd=developer)
+	B) create table test_auth (test_id int);
+	B) REVOKE ALL ON ALL TABLES IN SCHEMA public FROM developer;
+	B) GRANT SELECT ON ALL TABLES IN SCHEMA public TO developer;
+B) sudo -i -u postgres
+B) psql -c 'SHOW config_file;'	
+B) vi /etc/postgresql/14/main/postgresql.conf	
+B) listen_addresses = '*'
+B) vi /etc/postgresql/14/main/pg_hba.conf
+B) host    all             developer       172.17.0.3/32           password
+	A) sudo docker run --cap-add=NET_ADMIN -ti --rm ubuntu-ssh /bin/bash
+	C) sudo apt install postgresql postgresql-contrib
+	C) psql -h 172.17.0.2 -U developer -d myapp
+	B) \conninfo
+C) sudo apt-get iptables
+C) sudo iptables -A INPUT -p tcp --dport 22 -s <ip_container_B> -j DROP
+B) sudo apt-get iptables
+B) sudo iptables -A INPUT -p tcp --dport 22 -s <ip_container_C> -j DROP
+	
+	
+

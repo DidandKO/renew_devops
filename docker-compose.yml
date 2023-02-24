@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  server:
+    image: ubuntu-ssh:latest
+    cap_add:
+      - NET_ADMIN
